@@ -1,6 +1,8 @@
 // Открытие вкладки по якорю (hash) при загрузке страницы
+//Open tab by hash on page load
 window.addEventListener("DOMContentLoaded", () => {
   // Запускать вкладки только если это index.html (чтобы не мешать sport-news1.html)
+  // Run tabs only if it's index.html (to not interfere with sport-news1.html)
   const path = window.location.pathname.replace(/\\/g, "/");
   if (!document.querySelector(".tabs")) return;
   if (!path.endsWith("index.html") && !path.endsWith("/")) return;
@@ -10,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
     tabBtn = document.querySelector('.tab-link[data-tab="' + hash + '"]');
   }
   if (!tabBtn) {
-    tabBtn = document.querySelector(".tab-link"); // первая вкладка
+    tabBtn = document.querySelector(".tab-link"); // первая вкладка/first tab
   }
   if (tabBtn) tabBtn.click();
 });
@@ -41,6 +43,7 @@ document.querySelectorAll(".tab-link").forEach((btn) => {
     });
     document.getElementById("tab-" + tab).style.display = "block";
     // Обновляем hash в адресной строке
+    // Update hash in address bar
     if (history.replaceState) {
       history.replaceState(null, "", "#" + tab);
     } else {
