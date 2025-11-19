@@ -40,6 +40,12 @@ document.querySelectorAll(".tab-link").forEach((btn) => {
       panel.style.display = "none";
     });
     document.getElementById("tab-" + tab).style.display = "block";
+    // Обновляем hash в адресной строке
+    if (history.replaceState) {
+      history.replaceState(null, "", "#" + tab);
+    } else {
+      location.hash = "#" + tab;
+    }
   });
 });
 function toggleFullText(btn, event) {
