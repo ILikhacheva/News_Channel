@@ -1,10 +1,30 @@
+/* Стили для кнопок-ссылок */
+.btn,
+.btn-secondary {
+  color: #fff !important;
+  background: #444;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover,
+.btn-secondary:hover {
+  background: #222;
+  color: #fff;
+}
 /* Стили для блока полного текста и кнопки 'Читать больше' */
 .full-text {
   margin-top: 10px;
   padding: 10px 8px;
   background: var(--bg-main, #f9f9f9);
   border-radius: 8px;
-  font-size: 0.97rem;
+  font-size: 0.85rem;
+  text-align: justify;
+  display: block;
   color: var(--text-main, #222);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
@@ -120,6 +140,8 @@
 }
 /* === Dark/Light Theme Variables === */
 :root {
+  --accent: #e0e0e0;
+  --accent-hover: #d0d0d0;
   --bg-main: #f8f8f8;
   --bg-header: #222;
   --bg-tab: #c0c2c4;
@@ -127,9 +149,12 @@
   --text-main: #222;
   --text-header: #2e2d2d;
   --divider: #333;
+  --text-main-rgb: 34, 34, 34;
 }
 
 .dark-theme {
+  --accent: #333;
+  --accent-hover: #222;
   --bg-main: #181a1b;
   --bg-header: #181a1b;
   --bg-tab: #333;
@@ -137,6 +162,7 @@
   --text-main: #f0eded;
   --text-header: #f0eded;
   --divider: #444;
+  --text-main-rgb: 255, 255, 255;
 }
 body {
   position: relative;
