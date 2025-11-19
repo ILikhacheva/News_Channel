@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <button id="theme-toggle">🌙 Dark mode</button>
+      <h1>Welcome to my news page</h1>
+      <div class="main-content-wrapper">
+        <div class="tabs">
+          <button class="tab-link active" data-tab="life">Life</button>
+          <button class="tab-link" data-tab="sports">Sports</button>
+          <button class="tab-link" data-tab="weather">Weather</button>
+          <button class="tab-link" data-tab="nature">Nature</button>
+        </div>
+        <div class="divider"></div>
+        <div class="tab-content">
+          <div class="tab-panel" id="tab-life">
+            <div class="life-news-grid">
+              <a href="https://yle.fi/a/74-20194470" class="life-news-link">
+                <div class="life-news-card">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1716801133/39-12916696654482e98662"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    Suomessa on ongelma, jonka vain Finnair ja VR voivat ratkaista
+                    – Keski-Euroоппа yli 20 vuotta edellä
+                  </h2>
+                  <p class="life-news-desc">
+                    Juna- ja lentomatkaa ei saa Suomessa samalle matkalipulle. 
+                    Jos Finnair ja VR saisivat yhteistyön toimimaan, siitä kiittäisivät 
+                    sekä tavalliset matkustajat että ympäristö.
+                  </p>
+                </div>
+              </a>
+              <a href="https://yle.fi/a/74-20193459" class="life-news-link">
+                <div class="life-news-card">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1704459544/39-12239446597fbb91f818"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    Hollantilainen turisti kaatui pulkkamäessä – vaatii liki 40
+                    000 euron korvauksia, koska ei voinut leikata edes juustoa
+                  </h2>
+                  <p class="life-news-desc">
+                    Loukkaantuneen turistin mukaan matkailuyritys ei antanut
+                    kunnollisia turvallisuusohjeita mäенлaskuun и laiminlöi täten
+                    velvollisuutensa varmistaa matkailijoiden turvallisuus.
+                  </p>
+                </div>
+              </a>
+              <a href="https://yle.fi/a/74-20192710" class="life-news-link">
+                <div class="life-news-card">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1734347216/39-105687963bbc441bd57b"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    Norjassa nämä yrittäjät joutuisivat vankilaan – Suomessa
+                    annetaan vain kehotuksia
+                  </h2>
+                  <p class="life-news-desc">
+                    Osa yrityksistä maksaa työntekijöille vuodesta toiseen liian
+                    pientä palkkaa, koska siitä ei seuraa sanktioita.
+                    Palkкavarkaus on kriminalisoitu Euroopassa ainoastaan
+                    Norjassa.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-sports" style="display: none">
+            <div class="life-news-grid">
+              <div class="life-news-card">
+                <a href="sport-news1.html" class="life-news-link-internal">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.4995344506517692,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1763324398/39-1554748691a31da1789f"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    Historiallinen näky Levillä huomioitiin Brasiliassa asti –
+                    jalkapallon mahtimaassa erikoinen urheilupäivä
+                  </h2>
+                  <p class="life-news-desc">
+                    Brasiliassa koettiin sunnuntaina kaksi merkittävää urheilun
+                    virstanpylvästä.
+                  </p>
+                </a>
+                <div class="full-text" style="display:none;">
+                  <p>Levin maailmancupissa koettiin sunnuntaina historiallinen hetki, 
+                    kun alppihiihdon maailmancupin voitto meni ensimmäistä kertaa ikinä 
+                    Brasiliaan.</p>
+                  <p>Norjalaissyntyinen mutta brasilialaistaustainen Lucas Braathen 
+                    laskee nyt toista kauttaan Brasilian väreissä. Nuorella alppitähdellä
+                     meni pari kautta sitten sukset ristiin Norjan hiihtoliiton kanssa ja urheilija päätti uransa.</p>
+                  <p>Hän kuitenkin pyörsi päätöksensä heti seuraavana keväänä ja kertoi
+                     edustavansa alppirinteissä äitinsä synnyinmaata.</p>
+                  <p>Braathenilla oli ennen Levin ykkössijaa viisi voittoa Norjan väreissä.
+                     Brasilian lipun alla ykkössija oli hänelle ensimmäinen. Viime kaudella 
+                     hän sijoittui maailmancupissa brasilialaisena kolmesti toiseksi ja 
+                     kahdesti kolmanneksi.</p>
+
+                  <p>For more information, visit the official website.</p>
+                </div>
+                <button class="read-more-btn" type="button" onclick="toggleFullText(this, event)">Read more</button>
+              </div>
+              <a href="https://yle.fi/a/74-20194642" class="life-news-link">
+                <div class="life-news-card">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.7102300538423887,c_fill,g_faces,h_371,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1753447673/39-149879968837ce91d7b0"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    ”Mestarien mestari” Usyk luopuu WBO:n raskaansarjan
+                    tittelivyöstä
+                  </h2>
+                  <p class="life-news-desc">
+                    Fabio Wardleyn, 30, odotetaan nousevan WBO:n raskaansarjan
+                    mestariksi Oleksandr Usykin päätöksen jälkeen, kertoo Sky
+                    Sports.
+                  </p>
+                </div>
+              </a>
+              <a href="https://yle.fi/a/74-20194030" class="life-news-link">
+                <div class="life-news-card">
+                  <img
+                    src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1761582605/39-154433068ff9d8498347"
+                    alt="Life news image"
+                    class="life-news-img"
+                  />
+                  <h2 class="life-news-title">
+                    SM-liigan sarjauudistus aiheutti jälleen kannanottoja –
+                    talous­asiantuntijalla selvä näkemys vaihtoehdoista
+                  </h2>
+                  <p class="life-news-desc">
+                    Sekä jääkiekon pelaajayhdistys että konsulttiyhtiö EY
+                    julkaisivat kannanottonsa sen puolesta, että SM-liigan
+                    vaihtoehdoista käyttöön tulisi 12+10 joukkueen malli.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-weather" style="display: none">
+              <div class="life-news-grid">
+                <a href="https://yle.fi/a/74-20188238" class="life-news-link">
+                  <div class="life-news-card">
+                    <img
+                      src="https://images.cdn.yle.fi/image/upload/ar_1.5,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1760426362/39-153786468edf9500feb4"
+                      alt="Life news image"
+                      class="life-news-img"
+                    />
+                    <h2 class="life-news-title">
+                      Revontulia ja ruskan värejä – katso lokakuun parhaat
+                      sääkuvat
+                    </h2>
+                    <p class="life-news-desc">
+                      Lokakuun kuvagalleriaan koostetaan TV-uutisissa sekä
+                      säälähetyksissä näytettyjä katsojien sääkuvia.
+                    </p>
+                  </div>
+                </a>
+                <a href="https://yle.fi/a/74-20179592" class="life-news-link">
+                  <div class="life-news-card">
+                    <img
+                      src="https://images.cdn.yle.fi/image/upload/ar_2.2429906542056073,c_fill,g_faces,h_283,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1756292843/39-151306168aee6b6be29a"
+                      alt="Life news image"
+                      class="life-news-img"
+                    />
+                    <h2 class="life-news-title">
+                      Ukkospilviä, sateenkaaria ja loppukesän sumuisia aamuja –
+                      katso kooste elokuun parhaimmista sääkuvista
+                    </h2>
+                    <p class="life-news-desc">
+                      Kuvagalleriaan koostetaan elokuun mittaan Ylen
+                      säälähetyksissä ja tv-uutisissa näytettyjä sääkuvia.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-nature" style="display: none">
+            <div class="life-news-grid">
+                <a href="https://yle.fi/a/74-20194145" class="life-news-link">
+                  <div class="life-news-card">
+                    <img
+                      src="https://images.cdn.yle.fi/image/upload/c_crop,h_3046,w_5416,x_0,y_0/ar_1.777486051854283,c_fill,g_faces,h_357,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1696584765/39-1182327651fd3e66e2e0"
+                      alt="Life news image"
+                      class="life-news-img"
+                    />
+                    <h2 class="life-news-title">
+                      Kansainvälinen luonnonsuojelujärjestö myönsi miljoonien 
+                      rahoituksen Heinäveden Palokin koskien vapauttamiseen
+                    </h2>
+                    <p class="life-news-desc">
+                     Petteri Orpon (kok.) hallitusohjelmaan kirjattu koskien 
+                     ennallistaminen on enää kiinni voimalaitoksen omistajasta.
+                    </p>
+                  </div>
+                </a>
+            </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="divider"></div>
+      <div>
+        <p>© 2025 Inna Likhacheva</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

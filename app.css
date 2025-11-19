@@ -1,0 +1,239 @@
+/* Стили для блока полного текста и кнопки 'Читать больше' */
+.full-text {
+  margin-top: 10px;
+  padding: 10px 8px;
+  background: var(--bg-main, #f9f9f9);
+  border-radius: 8px;
+  font-size: 0.97rem;
+  color: var(--text-main, #222);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.read-more-btn {
+  display: block;
+  margin: 12px auto 0 auto;
+  padding: 6px 18px;
+  font-size: 0.97rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent, #e0e0e0);
+  color: var(--text-main, #222);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.read-more-btn:hover {
+  background: var(--accent-hover, #d0d0d0);
+}
+/* Ссылка на всю карточку новости */
+.life-news-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+.life-news-link:focus .life-news-card,
+.life-news-link:hover .life-news-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+}
+
+.life-news-link-internal {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.life-news-link-internal:hover .life-news-title {
+  text-decoration: underline;
+}
+
+/* Life news grid layout */
+.life-news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+.life-news-card {
+  background: var(--bg-main);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 240px;
+  padding: 16px 12px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+.life-news-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+}
+.life-news-img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: block;
+}
+.life-news-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.life-news-desc {
+  margin: 0;
+  font-size: 0.97rem;
+  text-align: justify;
+}
+/* Theme toggle button */
+#theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 16px 24px 0 0;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #444;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+#theme-toggle:hover {
+  background: #222;
+}
+
+/* Main content wrapper */
+.main-content-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 32px auto 0 auto;
+}
+
+/* Hide tab panels by default if needed */
+.tab-panel[style*="display: none"] {
+  display: none !important;
+}
+/* === Dark/Light Theme Variables === */
+:root {
+  --bg-main: #f8f8f8;
+  --bg-header: #222;
+  --bg-tab: #c0c2c4;
+  --bg-tab-active: #8f9091;
+  --text-main: #222;
+  --text-header: #2e2d2d;
+  --divider: #333;
+}
+
+.dark-theme {
+  --bg-main: #181a1b;
+  --bg-header: #181a1b;
+  --bg-tab: #333;
+  --bg-tab-active: #555;
+  --text-main: #f0eded;
+  --text-header: #f0eded;
+  --divider: #444;
+}
+body {
+  position: relative;
+  z-index: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+.header h1 {
+  font-size: 48px;
+  color: var(--text-header);
+}
+.divider {
+  width: 100%;
+  height: 10px;
+  background-color: var(--divider);
+  margin: 0;
+  border: 0;
+  position: relative;
+}
+
+/* Глобальные стили для обеспечения липкого футера */
+/* Globaalit tyylit tahmealle footerille */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer > div {
+  text-align: left;
+  padding-left: 24px;
+  margin-top: 24px;
+}
+
+/* Tabs styles */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 32px auto 0 auto;
+}
+.tab-link {
+  padding: 12px 32px;
+  background: var(--bg-tab);
+  color: #fff;
+  border: none;
+  border-radius: 14px 14px 0 0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+}
+.tab-link.active,
+.tab-link:hover {
+  background: var(--bg-tab-active);
+}
+.tab-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-main);
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 32px 24px;
+  color: var(--text-main);
+}
+.tab-panel {
+  display: block;
+}
+
+.sour-gummy-text {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}

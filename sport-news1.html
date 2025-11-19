@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport News</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <button id="theme-toggle">🌙 Dark mode</button>
+      <h1>Welcome to my news page</h1>
+      <div class="main-content-wrapper">
+        <div class="tabs">
+          <a href="index.html#life" class="tab-link">Life</a>
+          <a href="index.html#sports" class="tab-link active">Sports</a>
+          <a href="index.html#weather" class="tab-link">Weather</a>
+          <a href="index.html#nature" class="tab-link">Nature</a>
+        </div>
+        <div class="divider"></div>
+        <div class="tab-content">
+          <div class="tab-panel" id="tab-sports" style="display: block">
+            <div
+              class="life-news-card"
+              style="margin: 0 auto; max-width: 600px"
+            >
+              <img
+                src="https://images.cdn.yle.fi/image/upload/ar_1.4995344506517692,c_fill,g_faces,h_424,w_636/dpr_2.0/q_auto:eco/f_auto/fl_lossy/v1763324398/39-1554748691a31da1789f"
+                alt="Sport news image"
+                class="life-news-img"
+              />
+              <h2 class="life-news-title">
+                Historiallinen näky Levillä huomioitiin Brasiliassa asti –
+                jalkapallon mahtimaassa erikoinen urheilupäivä
+              </h2>
+              <div class="life-news-desc">
+                <!-- Koko uutinen -->
+                <p>Koko uutinen</p>
+              </div>
+              <a
+                href="index.html#sports"
+                class="btn btn-secondary"
+                style="margin-top: 24px; display: inline-block"
+                >← Takaisin urheilu-uutisiin</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="divider"></div>
+      <div>
+        <p>© 2025 Inna Likhacheva</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
